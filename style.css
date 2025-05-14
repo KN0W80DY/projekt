@@ -4,9 +4,9 @@
     background-position: center;               /* wyśrodkowanie obrazu */
     height: 300px;                             /* wysokość nagłówka */
     color: white;                              /* kolor tekstu */
-    text-align: top;
+    
     display: flex;
-    align-items: top;
+
     flex-direction: column;
     justify-content: space-between;
     font-size: 2em;
