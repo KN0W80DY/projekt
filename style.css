@@ -1,0 +1,234 @@
+.main-header {
+    background-image: url('TLO.png'); 
+    background-size: cover;                    /* obrazek dopasuje się do wielkości */
+    background-position: center;               /* wyśrodkowanie obrazu */
+    height: 300px;                             /* wysokość nagłówka */
+    color: white;                              /* kolor tekstu */
+    text-align: top;
+    display: flex;
+    align-items: top;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 2em;
+    text-shadow: 1px 1px 5px black, 0 0 25px rgb(30, 30, 147), 0 0 5px #080a11;
+    position: relative;
+    
+    
+}
+
+/* podstawowe style*/
+body {
+  margin: 0; 
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #080a11;
+  color: white;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#080a11+0,1d2a60+100 */
+background: linear-gradient(to bottom,  rgba(8,10,17,1) 0%,rgba(29,42,96,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+
+article {
+    border-width: 1px;
+border-style: dotted;
+border-color: #3d4771;
+max-width: 90%;
+margin-left: 20px
+}
+  
+
+
+
+
+/* nagłówek strony */
+header {
+  background-color: #080a11;
+  color: white;
+  padding: 10px;
+}
+
+/* menu nawigacyjne */
+nav ul {
+  list-style-type: none;
+    padding: 2;
+    margin:  0;
+    display: flex;
+    gap: 25px;
+    justify-content: right;
+    text-shadow: 1px 1px 5px black, 0 0 25px rgb(30, 30, 147), 0 0 10px #080a11;
+ font-size: 1.0em;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  
+    
+}
+
+nav li {
+  margin-right: 20px;
+  
+}
+nav a {
+  color: white;
+    text-decoration: none;
+    
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 20px;
+}
+article {
+  margin-bottom: 20px;
+}
+
+
+
+.row {
+  display: flex;
+  flex-wrap: wrap; /*ma się zwijać w razie potrzeby*/
+  margin: 0 -4px;
+  gap: 10px;
+}
+.column {
+  flex: 25%;       /*ile kolumn obok siebie*/
+  max-width: 23%;
+  padding: 0 4px;
+}
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;     /* w stostunku do kolumny na ile */
+}
+
+/* do sekcji o mnie, niewidoczne obrazki */
+.hover-image {
+    display: none;
+    position: absolute;
+    width: 200px;
+    border: 2px solid white;
+    z-index: 10;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    position: relative;
+    top: 0px;    /* odległość od tekstu */
+    left: 50px;    /* w poziomie */
+    width: 250px;
+    transition: opacity 0.8s ease;
+    pointer-events: none;
+}
+
+/* to znaczy że jak najedziesz, pokaż obrazek */
+.hover-text:hover + .hover-image {
+    display: block;
+}
+
+/* względem myszki */
+.hover-text {
+    position: relative;
+}
+
+.spis { /*kolor linku*/
+    color:white;
+    text-decoration: none;}
+
+.spis:hover {
+    color: rgb(54, 54, 218);
+    text-decoration: none;
+}
+
+
+figure {
+    text-align: center;
+    margin: 10px 0;
+}
+
+figcaption {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #dcdcdc;
+    text-shadow: 2px 2px 2px black;
+}
+
+.polecane { /*kolor linku*/
+    color:rgb(83, 83, 220)
+}
+
+.polecane:hover {
+    color: rgb(54, 54, 218);
+}
+
+.polecane:visited {
+    color: rgb(131, 131, 197);
+
+}
+
+.stopka {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 20px;               
+    padding: 15px;
+    background-color: #080a11;
+    border-top: 2px solid #333;
+}
+
+/* Stylizacja ikonek */
+.stopka .icon {
+    width: 40px;              
+    height: 40px;            
+    object-fit: contain;   
+    
+}
+.stopka .icon:hover {
+    transform: scale(1.1);          /* powiększenie */
+    filter: brightness(1.2);        /* rozjaśnienie */
+}
+
+
+ .kontakt {
+    color: white;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.5); /* przyciemniona ramka */
+    padding: 15px;
+    border-radius: 10px;
+}
+    
+.formularz {
+    color: black;
+    width: 40%;
+    background-color: #cec9e2;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);}
+
+.formularz input,
+.formularz textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;}
+
+
+
+
+/* dla węższych ekranów */
+@media screen and (max-width: 600px) {
+  nav ul {
+    flex-direction: column; /* menu pionowe na małych ekranach */
+  }
+  nav li {
+    margin-bottom: 10px;
+  }
+.column {
+    flex: 100%;    /* na małych ekranach 600 jedna kolumna*/
+    max-width: 100%;
+}}
+
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;     /*  dwie kolumny */
+    max-width: 48%;
+  }}}
